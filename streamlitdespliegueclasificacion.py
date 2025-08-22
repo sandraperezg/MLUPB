@@ -125,7 +125,7 @@ if uploaded_file is not None:
 
         # Check if the columns exist before trying to display them
 
-        st.write(df[['ID', 'Examen_admisión', 'Felder', 'Predicted_Aprobó_RF', 'Predicted_Aprobó_NN', 'Predicted_Aprobó_KNN', 'Predicted_Aprobó_SVM']])
+        st.write(df[['ID', 'Examen_admisión', 'Felder', 'Predicted_Aprobó_RF', 'Predicted_Aprobó_NN', 'Predicted_Aprobó_knn', 'Predicted_Aprobó_SVM']])
  
     except Exception as e:
 
