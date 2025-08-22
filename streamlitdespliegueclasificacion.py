@@ -75,18 +75,20 @@ if uploaded_file is not None:
         st.write("Predicciones (Neural Network):")
         st.write(df[['ID', 'Predicted_Aprobó_NN']].head())
 
-        # SVM
-        svm_predictions = svm_model.predict(processed_df)
-        df['Predicted_Aprobó_SVM'] = svm_predictions
-        st.write("Predicciones (SVM):")
-        st.write(df[['ID', 'Predicted_Aprobó_SVM']].head())
-
         # KNN
         knn_predictions =  knn_model.predict(processed_df)
         df['Predicted_Aprobó_KNN'] = knn_predictions
         st.write("Predicciones (knn):")
         st.write(df[['ID', 'Predicted_Aprobó_knn']].head())
         st.subheader("Resultados Completos:")
+        
+        # SVM
+        svm_predictions = svm_model.predict(processed_df)
+        df['Predicted_Aprobó_SVM'] = svm_predictions
+        st.write("Predicciones (SVM):")
+        st.write(df[['ID', 'Predicted_Aprobó_SVM']].head())
+
+
         
        st.subheader("Resultados Completos:")
         # Check if the columns exist before trying to display them
